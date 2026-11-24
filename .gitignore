@@ -1,6 +1,14 @@
 backup/
 config/database.php
 config/hash.php
+uploads/
+assets/uploads/
+PLAN_REBUILD_ERP.md
+genesis-DESIGN.md
+web/PANDUAN-BACKEND.md
+erp/modules/hrm/noteHRM.md
+erp/modules/hrm/README.txt
+erp/modules/hrm/api/db.local.php
 *.log
 *.bak
 *.tmp
