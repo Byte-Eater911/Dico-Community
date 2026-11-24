@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak | DICO - Digital Creative Community</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-kontak">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo-dico.png" alt="Logo DICO" class="navbar__logo-img" />
+        <span class="navbar__logo-tagline">Digital Creative Community</span>
+      </a>
+
+      <nav class="navbar__nav" id="navbarNav">
+        <a href="index.html" class="navbar__link">Beranda</a>
+        <a href="event.html" class="navbar__link">Event</a>
+        <a href="expert.html" class="navbar__link">Expert</a>
+        <a href="visimisi.html" class="navbar__link">Visi &amp; Misi</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="cermai.html" class="navbar__link">CerMAI</a>
+        <a href="kontak.html" class="navbar__link navbar__link--active">Kontak</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="login.html" class="navbar__login">Login</a>
+        <a href="login.html?mode=daftar" class="btn btn--primary btn--sm">Daftar</a>
+      </div>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Buka menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO KONTAK ============ -->
+    <section class="page-hero kt-hero">
+      <span class="kt-hero__deco kt-hero__deco--dots" aria-hidden="true"></span>
+      <span class="kt-hero__deco kt-hero__deco--slash" aria-hidden="true"></span>
+      <div class="container kt-hero__inner">
+        <span class="badge-pill">Hubungi Kami</span>
+        <h1 class="page-hero__title">Kontak <span class="page-hero__accent">DICO</span></h1>
+        <p class="page-hero__desc">
+          Kami siap membantu dan menjawab pertanyaanmu. Jangan ragu untuk menghubungi kami melalui informasi yang tersedia di bawah ini.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ KARTU KONTAK (menumpuk di hero) ============ -->
+    <section class="kt-quick-wrap">
+      <div class="container">
+        <div class="kt-quick">
+          <a class="kt-quick__card" href="mailto:info@dicocommunity.org">
+            <span class="kt-quick__icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h3>Email</h3>
+              <strong>info@dicocommunity.org</strong>
+              <p>Kami siap membantu melalui email resmi DICO.</p>
+            </div>
+          </a>
+          <a class="kt-quick__card" href="https://wa.me/+6281234567890">
+            <span class="kt-quick__icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h3>Telepon</h3>
+              <strong>+62 812 3456 7890</strong>
+              <p>Senin - Jumat, 08.00 - 17.00 WIB</p>
+            </div>
+          </a>
+          <a class="kt-quick__card" href="#lokasi">
+            <span class="kt-quick__icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h3>Alamat</h3>
+              <strong>Universitas BSI Kampus Kramat 98</strong>
+              <p>Jl. Kramat Raya No.98, Jakarta Pusat</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMULIR + MEDIA SOSIAL ============ -->
+    <section class="kt-main">
+      <div class="container kt-main__grid">
+        <div class="kt-form-card">
+          <span class="eyebrow eyebrow--blue">INFORMASI KONTAK</span>
+          <h2 class="section-title">Hubungi Kami</h2>
+          <p class="kt-lead">DICO terbuka untuk pertanyaan, kerja sama, informasi event, dan berbagai kebutuhan seputar komunitas.</p>
+
+          <form id="kontakForm" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="ktNama">Nama</label>
+                <input class="field__control" id="ktNama" type="text" autocomplete="name" placeholder="Nama lengkap" />
+                <p class="field__error"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="ktEmail">Email</label>
+                <input class="field__control" id="ktEmail" type="email" autocomplete="email" placeholder="nama@email.com" />
+                <p class="field__error"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="ktSubjek">Keperluan</label>
+              <select class="field__control" id="ktSubjek">
+                <option value="">Pilih keperluan</option>
+                <option>Pertanyaan</option>
+                <option>Kerja sama</option>
+                <option>Informasi event</option>
+                <option>Lainnya</option>
+              </select>
+              <p class="field__error"></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="ktPesan">Pesan</label>
+              <textarea class="field__control" id="ktPesan" rows="5" placeholder="Tulis pesanmu di sini"></textarea>
+              <p class="field__error"></p>
+            </div>
+            <button class="flow-btn flow-btn--primary" type="submit">Kirim Pesan <i class="fa-solid fa-paper-plane"></i></button>
+            <p class="kt-note" id="ktNote" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+
+        <aside class="kt-social" id="media-sosial">
+          <span class="eyebrow eyebrow--blue">MEDIA SOSIAL</span>
+          <h2 class="kt-social__title">Ikuti Kami</h2>
+          <p class="kt-lead">Ikuti kami untuk update terbaru seputar event dan program DICO.</p>
+
+          <!-- Ubah handle & link media sosial di bagian ini -->
+          <ul class="kt-social__list">
+            <li>
+              <a class="kt-social__item kt-social__item--instagram" href="https://www.instagram.com/dico.community" target="_blank" rel="noopener">
+                <span class="kt-social__icon"><i class="fa-brands fa-instagram"></i></span>
+                <span class="kt-social__text"><strong>Instagram</strong><span>@dico.community</span></span>
+                <i class="fa-solid fa-arrow-up-right-from-square kt-social__go"></i>
+              </a>
+            </li>
+            <li>
+              <a class="kt-social__item kt-social__item--tiktok" href="https://www.tiktok.com/@dico.community" target="_blank" rel="noopener">
+                <span class="kt-social__icon"><i class="fa-brands fa-tiktok"></i></span>
+                <span class="kt-social__text"><strong>TikTok</strong><span>@dico.community</span></span>
+                <i class="fa-solid fa-arrow-up-right-from-square kt-social__go"></i>
+              </a>
+            </li>
+            <li>
+              <a class="kt-social__item kt-social__item--youtube" href="https://www.youtube.com/@Dico.Community" target="_blank" rel="noopener">
+                <span class="kt-social__icon"><i class="fa-brands fa-youtube"></i></span>
+                <span class="kt-social__text"><strong>YouTube</strong><span>DICO Community</span></span>
+                <i class="fa-solid fa-arrow-up-right-from-square kt-social__go"></i>
+              </a>
+            </li>
+            <li>
+              <a class="kt-social__item kt-social__item--linkedin" href="#" target="_blank" rel="noopener">
+                <span class="kt-social__icon"><i class="fa-brands fa-linkedin-in"></i></span>
+                <span class="kt-social__text"><strong>LinkedIn</strong><span>DICO Community</span></span>
+                <i class="fa-solid fa-arrow-up-right-from-square kt-social__go"></i>
+              </a>
+            </li>
+            <li>
+              <a class="kt-social__item kt-social__item--x" href="#" target="_blank" rel="noopener">
+                <span class="kt-social__icon"><i class="fa-brands fa-x-twitter"></i></span>
+                <span class="kt-social__text"><strong>X</strong><span>DICO Community</span></span>
+                <i class="fa-solid fa-arrow-up-right-from-square kt-social__go"></i>
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ LOKASI ============ -->
+    <section class="kt-map-section" id="lokasi">
+      <div class="container">
+        <div class="kt-map">
+          <iframe
+            class="kt-map__iframe"
+            src="https://www.google.com/maps?q=-6.182946669317064,106.842912&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokasi DICO - Digital Creative Community"
+          ></iframe>
+          <div class="kt-map__card">
+            <span class="kt-map__pin"><i class="fa-solid fa-location-dot"></i></span>
+            <h3>DICO - Digital Creative Community</h3>
+            <p>Universitas BSI Kampus Kramat 98<br>Jl. Kramat Raya No.98, Kwitang, Kec. Senen, Jakarta Pusat, DKI Jakarta 10450</p>
+            <a href="https://www.google.com/maps?q=-6.182946669317064,106.842912" target="_blank" rel="noopener">Buka di Google Maps <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARI TERHUBUNG ============ -->
+    <section class="kt-cta">
+      <div class="container">
+        <div class="kt-cta__box">
+          <span class="kt-cta__deco" aria-hidden="true"></span>
+          <div class="kt-cta__text">
+            <h2>Mari Terhubung dengan DICO</h2>
+            <p>Bergabunglah dengan komunitas kreatif kami dan jadilah bagian dari perjalanan membangun masa depan teknologi Indonesia.</p>
+          </div>
+          <div class="kt-cta__social">
+            <a href="https://www.instagram.com/dico.community" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@dico.community" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">Di<span class="navbar__logo-accent">CO</span></span>
+        <span class="footer__logo-tagline">Digital Creative Community</span>
+        <p>Bersama membangun generasi kreatif yang siap menghadapi masa depan digital.</p>
+      </div>
+
+      <div class="footer__col">
+        <h5>Navigasi</h5>
+        <a href="index.html">Beranda</a>
+        <a href="event.html">Event</a>
+        <a href="expert.html">Expert</a>
+        <a href="visimisi.html">Visi &amp; Misi</a>
+        <a href="about.html">About</a>
+        <a href="cermai.html">CerMAI</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+
+      <div class="footer__col">
+        <h5>Kontak</h5>
+        <a href="mailto:info@dicocommunity.org"><i class="fa-regular fa-envelope"></i> info@dicocommunity.org</a>
+        <a href="tel:+6281234567890"><i class="fa-solid fa-phone"></i> +62 812 3456 7890</a>
+        <span><i class="fa-solid fa-location-dot"></i> Jakarta Pusat, Indonesia</span>
+      </div>
+
+      <div class="footer__col">
+        <h5>Ikuti Kami</h5>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/dico.community" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@Dico.Community" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.tiktok.com/@dico.community" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>&copy; 2026 DICO Community. All rights reserved.</span>
+        <div class="footer__bottom-links">
+          <a href="kontak.html">Syarat &amp; Ketentuan</a>
+          <a href="kontak.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/api.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/kontak.js"></script>
+</body>
+</html>

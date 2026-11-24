@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DICO | Digital Creative Community</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo-dico.png" alt="Logo DICO" class="navbar__logo-img" />
+        <span class="navbar__logo-tagline">Digital Creative Community</span>
+      </a>
+
+      <nav class="navbar__nav" id="navbarNav">
+        <a href="index.html" class="navbar__link navbar__link--active">Beranda</a>
+        <a href="event.html" class="navbar__link">Event</a>
+        <a href="expert.html" class="navbar__link">Expert</a>
+        <a href="visimisi.html" class="navbar__link">Visi &amp; Misi</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="cermai.html" class="navbar__link">CerMAI</a>
+        <a href="kontak.html" class="navbar__link">Kontak</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="login.html" class="navbar__login">Login</a>
+        <a href="login.html?mode=daftar" class="btn btn--primary btn--sm">Daftar</a>
+      </div>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Buka menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero hero--carousel">
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge-pill">Digital Creative Community</span>
+
+          <h1 class="hero__title">
+            Belajar. Terhubung.<br />
+            <span class="hero__title-accent">Berkembang.</span>
+          </h1>
+
+          <p class="hero__desc">
+            Temukan seminar, workshop, dan kegiatan digital kreatif untuk meningkatkan skill dan memperluas koneksi kamu.
+          </p>
+
+          <div class="hero__cta">
+            <a href="event.html" class="btn btn--primary">Jelajahi Event <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="about.html" class="btn btn--outline">Tentang DICO</a>
+          </div>
+
+          <div class="hero__members hero__stats">
+            <div class="hero__members-group">
+              <div class="avatar-stack">
+                <span class="avatar-stack__item"></span>
+                <span class="avatar-stack__item"></span>
+                <span class="avatar-stack__item"></span>
+                <span class="avatar-stack__item avatar-stack__item--more"><i class="fa-solid fa-plus"></i></span>
+              </div>
+              <div class="hero__members-text">
+                <strong>+12.5K</strong>
+                <span>Anggota aktif dalam komunitas DICO</span>
+              </div>
+            </div>
+
+          <div class="hero__stat">
+            <i class="fa-regular fa-calendar-check hero__stat-icon"></i>
+            <div class="hero__stat-text">
+              <strong>150+</strong>
+              <span>Event Terselenggara</span>
+            </div>
+          </div>
+
+          <div class="hero__stat">
+            <i class="fa-regular fa-user hero__stat-icon"></i>
+            <div class="hero__stat-text">
+              <strong>50+</strong>
+              <span>Expert &amp; Pembicara</span>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <!-- Bentuk organik foto hero (dipakai clip-path di CSS) -->
+          <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+            <defs>
+              <clipPath id="heroPhotoShape" clipPathUnits="objectBoundingBox">
+                <path d="M0.155 0.03 L0.885 0 C0.955 0 1 0.05 1 0.14 L1 0.82 C1 0.95 0.95 1 0.87 0.99 C0.6 0.93 0.3 0.85 0.12 0.80 C0.03 0.775 0 0.72 0 0.62 L0 0.5 C0 0.28 0.05 0.08 0.155 0.03 Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="hero__shape hero__shape--blob" aria-hidden="true"></span>
+          <span class="hero__shape hero__rim" aria-hidden="true"><span class="hero__rim-shape"></span></span>
+          <span class="hero__shape hero__shape--dots" aria-hidden="true"></span>
+          <span class="hero__shape hero__shape--slash-top" aria-hidden="true"></span>
+          <span class="hero__shape hero__shape--slash-bottom" aria-hidden="true"></span>
+
+          <div class="hero__slider" id="heroSlider"></div>
+
+          <svg class="hero__accent-line" viewBox="0 0 90 110" width="80" height="96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M64 8C34 14 10 46 14 82" stroke="#2F8FFF" stroke-width="4" stroke-linecap="round" />
+            <circle cx="14" cy="90" r="7" fill="#2F8FFF" />
+          </svg>
+
+
+          <div class="hero__floating-card" id="heroFloatingCard">
+            <span class="tag tag--seminar" id="heroCardTag">SEMINAR</span>
+            <h3 class="hero__floating-card-title" id="heroCardTitle">Digital Marketing for Business Growth</h3>
+            <div class="hero__floating-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> <span id="heroCardDate">12 Sep 2026</span></span>
+              <span><i class="fa-solid fa-location-dot"></i> <span id="heroCardLocation">Wisma BSI Yogyakarta</span></span>
+            </div>
+            <a href="event-detail.html?id=strategi-digital-marketing-era-ai" id="heroCardLink" class="icon-btn icon-btn--primary hero__floating-card-btn" aria-label="Lihat detail event">
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="hero__dots" id="heroDots"></div>
+
+          <div class="hero__nav">
+            <button class="icon-btn icon-btn--ghost" id="heroPrev" aria-label="Slide sebelumnya"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="icon-btn icon-btn--ghost" id="heroNext" aria-label="Slide selanjutnya"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEARCH ============ -->
+    <section class="search-section search-overlap-wrapper">
+      <div class="container">
+        <div class="search-box">
+          <div class="search-box__input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Cari event, topik, atau pembicara..." id="searchInput" />
+          </div>
+          <button class="icon-btn icon-btn--primary icon-btn--lg" id="searchBtn" aria-label="Cari">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <span class="eyebrow">KATEGORI EVENT</span>
+        <div class="category-pills">
+          <button class="pill" data-category="seminar">
+            <i class="fa-solid fa-user-group"></i> Seminar
+          </button>
+          <button class="pill" data-category="webinar">
+            <i class="fa-solid fa-display"></i> Webinar
+          </button>
+          <button class="pill" data-category="workshop">
+            <i class="fa-solid fa-people-group"></i> Workshop
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENT TERBARU ============ -->
+    <section class="events-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">EVENT MENDATANG</span>
+            <h2 class="section-title">Jangan Lewatkan Event Terbaru Kami</h2>
+          </div>
+          <a href="event.html" class="link-arrow">Lihat Semua Event <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="event-grid" id="homeEventGrid">
+          <!-- Kartu dibuat otomatis dari js/events-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KENAPA HARUS DICO ============ -->
+    <section class="why-section">
+      <div class="container why-section__inner">
+        <div class="why-section__content">
+          <span class="eyebrow">KENAPA HARUS DICO?</span>
+          <h2 class="section-title">Lebih dari Sekadar Event, Ini Tentang Komunitas</h2>
+          <p class="section-desc">
+            DICO hadir sebagai wadah bagi individu kreatif untuk belajar, berbagi, dan bertumbuh bersama dalam ekosistem digital yang positif dan profesional.
+          </p>
+          <a href="about.html" class="btn btn--teal">Tentang DICO <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="feature-card__icon feature-card__icon--red"><i class="fa-solid fa-user"></i></span>
+            <h4>Pembicara Profesional</h4>
+            <p>Dapatkan ilmu langsung dari para ahli di bidangnya.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card__icon feature-card__icon--blue"><i class="fa-solid fa-shield-halved"></i></span>
+            <h4>Materi Berkualitas</h4>
+            <p>Akses materi eksklusif yang relevan dan up-to-date.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card__icon feature-card__icon--teal"><i class="fa-solid fa-certificate"></i></span>
+            <h4>Sertifikat</h4>
+            <p>Tingkatkan nilai tambah untuk kariermu.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card__icon feature-card__icon--green"><i class="fa-solid fa-location-dot"></i></span>
+            <h4>Jaringan Luas</h4>
+            <p>Bertemu dan terhubung dengan komunitas profesional.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card__icon feature-card__icon--purple"><i class="fa-solid fa-sliders"></i></span>
+            <h4>Fleksibel</h4>
+            <p>Ikuti event secara online maupun offline.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card__icon feature-card__icon--pink"><i class="fa-solid fa-coins"></i></span>
+            <h4>Biaya Terjangkau</h4>
+            <p>Banyak pilihan event gratis hingga berbayar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KATEGORI EVENT (TOPIK) ============ -->
+    <section class="topics-section">
+      <div class="container">
+        <span class="eyebrow">JELAJAHI TOPIK</span>
+        <h2 class="section-title">Kategori Event</h2>
+        <p class="section-desc">Pilih kategori yang paling sesuai dengan minat dan tujuanmu.</p>
+
+        <div class="topic-grid">
+          <a href="event.html?q=AI" class="topic-card">
+            <span class="topic-card__icon topic-card__icon--blue"><i class="fa-solid fa-microchip"></i></span>
+            <span>AI &amp; Technology</span>
+          </a>
+          <a href="event.html?q=Design" class="topic-card">
+            <span class="topic-card__icon topic-card__icon--pink"><i class="fa-solid fa-palette"></i></span>
+            <span>Design &amp; Creative</span>
+          </a>
+          <a href="event.html?q=Marketing" class="topic-card">
+            <span class="topic-card__icon topic-card__icon--teal"><i class="fa-solid fa-briefcase"></i></span>
+            <span>Business &amp; Marketing</span>
+          </a>
+          <a href="event.html?q=Career" class="topic-card">
+            <span class="topic-card__icon topic-card__icon--orange"><i class="fa-solid fa-chart-line"></i></span>
+            <span>Career &amp; Development</span>
+          </a>
+          <a href="event.html?q=Programming" class="topic-card">
+            <span class="topic-card__icon topic-card__icon--purple"><i class="fa-solid fa-code"></i></span>
+            <span>Programming</span>
+          </a>
+          <a href="event.html" class="topic-card">
+            <span class="topic-card__icon topic-card__icon--gray"><i class="fa-solid fa-ellipsis"></i></span>
+            <span>Others</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PEMBICARA & EXPERT ============ -->
+    <section class="experts-section">
+      <div class="container">
+        <span class="eyebrow">PEMBICARA &amp; EXPERT</span>
+        <h2 class="section-title">Pembicara &amp; Expert</h2>
+        <p class="section-desc">Belajar dari para profesional dan praktisi terbaik di bidangnya.</p>
+
+        <div class="experts-carousel">
+          <button class="icon-btn icon-btn--outline experts-carousel__nav experts-carousel__nav--prev" id="expertPrev" aria-label="Sebelumnya">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="experts-viewport">
+            <div class="experts-track" id="expertsTrack">
+              <!-- Kartu dibuat otomatis dari js/experts-data.js -->
+            </div>
+          </div>
+
+          <button class="icon-btn icon-btn--outline experts-carousel__nav experts-carousel__nav--next" id="expertNext" aria-label="Selanjutnya">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="experts-dots" id="expertsDots"></div>
+      </div>
+    </section>
+
+ <!-- ============= PARTNER ============= -->
+<section class="partners-section">
+    <div class="container">
+        <span class="eyebrow">PARTNER KAMI</span>
+        <h2 class="section-title">Didukung oleh Berbagai Mitra Terkemuka</h2>
+        
+        <div class="partners-row">
+            <img src="assets/images/bsi-logo.png" alt="BSI" class="partner-logo">
+            <img src="assets/images/telkom-logo.png" alt="Telkom Indonesia" class="partner-logo">
+            <img src="assets/images/google-logo.png" alt="Google" class="partner-logo">
+            <img src="assets/images/microsoft-logo.png" alt="Microsoft" class="partner-logo">
+            <img src="assets/images/kominfo-logo.png" alt="Kominfo" class="partner-logo">
+        </div>
+    </div>
+</section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-box__deco"></div>
+          <div class="cta-box__content">
+            <h2>Siap Jadi Bagian dari DICO?</h2>
+            <p>Daftar sekarang dan jangan lewatkan event menarik lainnya!</p>
+          </div>
+          <a href="login.html" class="btn btn--white">Daftar Sekarang <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+    <!-- Ubah bagian ini menjadi tag img yang mengarah ke logo Anda -->
+    <a href="index.html">
+        <img src="assets/images/logo-dico.png" alt="DiCO Community" class="footer__logo-img">
+    </a>
+    <span class="footer__logo-tagline">Digital Creative Community</span>
+    <p>Bersama membangun generasi kreatif yang siap menghadapi masa depan digital.</p>
+</div>
+
+      <div class="footer__col">
+        <h5>Navigasi</h5>
+        <a href="index.html">Beranda</a>
+        <a href="event.html">Event</a>
+        <a href="expert.html">Expert</a>
+        <a href="visimisi.html">Visi &amp; Misi</a>
+        <a href="about.html">About</a>
+        <a href="cermai.html">CerMAI</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+
+      <div class="footer__col">
+        <h5>Kontak</h5>
+        <a href="mailto:info@dicocommunity.org"><i class="fa-regular fa-envelope"></i> info@dicocommunity.org</a>
+        <a href="tel:+6281234567890"><i class="fa-solid fa-phone"></i> +62 812 3456 7890</a>
+        <span><i class="fa-solid fa-location-dot"></i> Yogyakarta, Indonesia</span>
+      </div>
+
+      <div class="footer__col">
+        <h5>Ikuti Kami</h5>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/dico.community" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.tiktok.com/@dico.community" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>&copy; 2026 DICO Community. All rights reserved.</span>
+        <div class="footer__bottom-links">
+          <a href="kontak.html">Syarat &amp; Ketentuan</a>
+          <a href="kontak.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/api.js"></script>
+  <script src="js/experts-data.js"></script>
+  <script src="js/events-data.js"></script>
+  <script src="js/event-render.js"></script>
+  <script src="js/expert-render.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

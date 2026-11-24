@@ -1,0 +1,398 @@
+/* ============================================================
+   DICO ERP - Finance Module Styles
+   Design: Genesis + DICO Brand Theme (#2F8FFF & #0B1A3A)
+   ============================================================ */
+
+.fin-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Page Header */
+.fin-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+.fin-table-card {
+  overflow: hidden;
+}
+
+.fin-table-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.fin-table-heading h2 {
+  margin: 0 0 3px;
+  font-size: 17px;
+}
+
+.fin-table-heading p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.fin-heading {
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.fin-heading h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.fin-heading p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* KPI Summary Cards Grid */
+.fin-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.fin-mini-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 22px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(11, 26, 58, 0.04);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  overflow: hidden;
+}
+
+.fin-mini-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(11, 26, 58, 0.08);
+  border-color: rgba(47, 143, 255, 0.3);
+}
+
+.fin-mini-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary) 0%, rgba(47, 143, 255, 0.2) 100%);
+  opacity: 0.85;
+}
+
+.fin-mini-card.accent-green::before {
+  background: linear-gradient(90deg, #10B981 0%, rgba(16, 185, 129, 0.2) 100%);
+}
+
+.fin-mini-card.accent-amber::before {
+  background: linear-gradient(90deg, #F59E0B 0%, rgba(245, 158, 11, 0.2) 100%);
+}
+
+.fin-mini-card.accent-purple::before {
+  background: linear-gradient(90deg, #8B5CF6 0%, rgba(139, 92, 246, 0.2) 100%);
+}
+
+.fin-mini-card.accent-red::before {
+  background: linear-gradient(90deg, #EF4444 0%, rgba(239, 68, 68, 0.2) 100%);
+}
+
+.fin-mini-card.accent-orange::before {
+  background: linear-gradient(90deg, #F59E0B 0%, rgba(245, 158, 11, 0.2) 100%);
+}
+
+.fin-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.fin-card-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.fin-card-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(47, 143, 255, 0.08);
+  color: var(--primary);
+}
+
+.fin-mini-card.accent-green .fin-card-icon {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+}
+
+.fin-mini-card.accent-amber .fin-card-icon {
+  background: rgba(245, 158, 11, 0.1);
+  color: #D97706;
+}
+
+.fin-mini-card.accent-purple .fin-card-icon {
+  background: rgba(139, 92, 246, 0.1);
+  color: #7C3AED;
+}
+
+.fin-mini-card.accent-red .fin-card-icon {
+  background: rgba(239, 68, 68, 0.1);
+  color: #DC2626;
+}
+
+.fin-mini-card.accent-orange .fin-card-icon {
+  background: rgba(245, 158, 11, 0.1);
+  color: #D97706;
+}
+
+.fin-card-value {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--navy);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.fin-card-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* Table Card & Data Rows */
+.fin-page .card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 4px rgba(11, 26, 58, 0.04);
+  background: var(--surface);
+}
+
+.fin-page .table th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.fin-page .table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.fin-page .table tr:last-child td {
+  border-bottom: none;
+}
+
+.fin-page .table tr:hover td {
+  background: #f8fafc;
+}
+
+/* Account Code Pill */
+.fin-code {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  background: #f1f5f9;
+  color: #0f172a;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Colored Account Badges */
+.fin-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.fin-badge-aset {
+  background: rgba(47, 143, 255, 0.1);
+  color: #1d72db;
+}
+
+.fin-badge-liabilitas {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+}
+
+.fin-badge-ekuitas {
+  background: rgba(139, 92, 246, 0.12);
+  color: #6d28d9;
+}
+
+.fin-badge-pendapatan {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+}
+
+.fin-badge-beban {
+  background: rgba(239, 68, 68, 0.1);
+  color: #b91c1c;
+}
+
+/* Source / Module Badges */
+.fin-badge-source {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 500;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+/* Money Formatting in Tables */
+.fin-money-cell {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.fin-money-debit {
+  color: #059669;
+}
+
+.fin-money-credit {
+  color: #2563eb;
+}
+
+/* Actions Column */
+.fin-actions {
+  white-space: nowrap;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Split Form for Double Entry Transactions */
+.fin-journal-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.fin-entry-card {
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: #f8fafc;
+}
+
+.fin-entry-card.debit {
+  border-left: 3px solid #10B981;
+}
+
+.fin-entry-card.credit {
+  border-left: 3px solid #2F8FFF;
+}
+
+.fin-entry-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.fin-entry-card-header h3 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.fin-entry-card.debit .fin-entry-card-header h3 {
+  color: #047857;
+}
+
+.fin-entry-card.credit .fin-entry-card-header h3 {
+  color: #1d4ed8;
+}
+
+/* Empty State */
+.fin-empty-state {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.fin-empty-state svg {
+  margin-bottom: 12px;
+  opacity: 0.4;
+  color: var(--text-muted);
+}
+
+.fin-empty-state p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .fin-summary-grid {
+    grid-template-columns: 1fr;
+  }
+  .fin-heading {
+    flex-direction: column;
+  }
+  .fin-journal-form {
+    grid-template-columns: 1fr;
+  }
+  .fin-actions {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event | DICO - Digital Creative Community</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-event">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo-dico.png" alt="Logo DICO" class="navbar__logo-img" />
+        <span class="navbar__logo-tagline">Digital Creative Community</span>
+      </a>
+
+      <nav class="navbar__nav" id="navbarNav">
+        <a href="index.html" class="navbar__link">Beranda</a>
+        <a href="event.html" class="navbar__link navbar__link--active">Event</a>
+        <a href="expert.html" class="navbar__link">Expert</a>
+        <a href="visimisi.html" class="navbar__link">Visi &amp; Misi</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="cermai.html" class="navbar__link">CerMAI</a>
+        <a href="kontak.html" class="navbar__link">Kontak</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="login.html" class="navbar__login">Login</a>
+        <a href="login.html?mode=daftar" class="btn btn--primary btn--sm">Daftar</a>
+      </div>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Buka menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO EVENT ============ -->
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div class="page-hero__content">
+          <span class="badge-pill">Digital Creative Community</span>
+          <h1 class="page-hero__title">
+            Temukan Event<br />
+            <span class="page-hero__accent">Terbaik di DICO</span>
+          </h1>
+          <p class="page-hero__desc">
+            Jelajahi berbagai seminar, workshop, dan event menarik yang sesuai dengan minat dan kebutuhanmu.
+          </p>
+          <div class="page-hero__stats">
+            <div class="hero__stat">
+              <i class="fa-regular fa-calendar-check hero__stat-icon"></i>
+              <div class="hero__stat-text"><strong>50+</strong><span>Event Unggulan</span></div>
+            </div>
+            <div class="hero__stat">
+              <i class="fa-solid fa-users hero__stat-icon"></i>
+              <div class="hero__stat-text"><strong>1.2K+</strong><span>Total Peserta</span></div>
+            </div>
+            <div class="hero__stat">
+              <i class="fa-solid fa-medal hero__stat-icon"></i>
+              <div class="hero__stat-text"><strong>100%</strong><span>Praktisi Ahli</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="page-hero__media">
+          <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+            <defs>
+              <clipPath id="heroPhotoShape" clipPathUnits="objectBoundingBox">
+                <path d="M0.155 0.03 L0.885 0 C0.955 0 1 0.05 1 0.14 L1 0.82 C1 0.95 0.95 1 0.87 0.99 C0.6 0.93 0.3 0.85 0.12 0.80 C0.03 0.775 0 0.72 0 0.62 L0 0.5 C0 0.28 0.05 0.08 0.155 0.03 Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="page-hero__shape page-hero__shape--blob" aria-hidden="true"></span>
+          <span class="page-hero__shape page-hero__rim" aria-hidden="true"><span></span></span>
+          <span class="page-hero__shape page-hero__shape--dots" aria-hidden="true"></span>
+          <span class="page-hero__shape page-hero__shape--slash-top" aria-hidden="true"></span>
+          <span class="page-hero__shape page-hero__shape--slash-bottom" aria-hidden="true"></span>
+          <div class="page-hero__photo">
+            <img src="assets/images/hero2.jpeg" alt="Peserta mengikuti workshop DICO di dalam ruangan" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEARCH ============ -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-box">
+          <div class="search-box__input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Cari event, topik, atau pembicara..." id="searchInput" />
+          </div>
+          <button class="icon-btn icon-btn--primary icon-btn--lg" id="searchBtn" aria-label="Cari">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="category-pills page-event" id="categoryPills">
+          <button class="pill pill--active" data-category="semua">Semua</button>
+          <button class="pill" data-category="workshop">
+            <i class="fa-solid fa-people-group"></i> Workshop
+          </button>
+          <button class="pill" data-category="seminar">
+            <i class="fa-regular fa-calendar"></i> Seminar
+          </button>
+          <button class="pill" data-category="webinar">
+            <i class="fa-solid fa-display"></i> Webinar
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENT LISTING ============ -->
+    <section class="event-listing-section">
+      <div class="container">
+        <div class="event-layout">
+
+          <!-- BAGIAN KIRI: daftar event -->
+          <div class="event-layout__main">
+            <div class="section-header">
+              <div>
+                <span class="eyebrow">EVENT DICO</span>
+                <h2 class="section-title">Jelajahi Event Menarik untuk Kamu</h2>
+              </div>
+            </div>
+
+            <div class="event-grid event-grid--catalog" id="eventCatalog">
+              <!-- Kartu dibuat otomatis dari js/events-data.js -->
+            </div>
+          </div>
+
+          <!-- BAGIAN KANAN: panel Filter Event -->
+          <aside class="event-layout__sidebar">
+            <div class="filter-card">
+              <h3 class="filter-card__title">Filter Event</h3>
+
+              <div class="filter-group">
+                <span class="filter-group__label"><i class="fa-solid fa-list-check"></i> Kategori</span>
+                <label class="filter-checkbox">
+                  <span class="filter-checkbox__input">
+                    <input type="checkbox" checked data-filter-category="seminar" />
+                    <span>Seminar</span>
+                  </span>
+                  <span class="filter-checkbox__count">3</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span class="filter-checkbox__input">
+                    <input type="checkbox" checked data-filter-category="webinar" />
+                    <span>Webinar</span>
+                  </span>
+                  <span class="filter-checkbox__count">3</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span class="filter-checkbox__input">
+                    <input type="checkbox" checked data-filter-category="workshop" />
+                    <span>Workshop</span>
+                  </span>
+                  <span class="filter-checkbox__count">2</span>
+                </label>
+              </div>
+
+              <div class="filter-group">
+                <span class="filter-group__label"><i class="fa-regular fa-calendar"></i> Tanggal</span>
+                <div class="filter-field">
+                  <i class="fa-regular fa-calendar filter-field__icon"></i>
+                  <input type="date" id="filterDate" />
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <span class="filter-group__label"><i class="fa-solid fa-location-dot"></i> Lokasi</span>
+                <div class="filter-field">
+                  <i class="fa-solid fa-location-dot filter-field__icon"></i>
+                  <select id="filterLocation">
+                    <option value="">Semua Lokasi</option>
+                    <option>Wisma BSI Yogyakarta</option>
+                    <option>Online</option>
+                    <option>Yogyakarta</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down filter-field__chevron"></i>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <span class="filter-group__label"><i class="fa-solid fa-tag"></i> Harga</span>
+                <label class="filter-radio">
+                  <input type="radio" name="filterPrice" value="all" checked />
+                  <span>Semua</span>
+                </label>
+                <label class="filter-radio">
+                  <input type="radio" name="filterPrice" value="free" />
+                  <span>Gratis</span>
+                </label>
+                <label class="filter-radio">
+                  <input type="radio" name="filterPrice" value="paid" />
+                  <span>Berbayar</span>
+                </label>
+              </div>
+
+              <div class="filter-group">
+                <span class="filter-group__label"><i class="fa-solid fa-user"></i> Pembicara</span>
+                <div class="filter-field">
+                  <i class="fa-solid fa-user filter-field__icon"></i>
+                  <select id="filterSpeaker">
+                    <option value="">Semua Pembicara</option>
+                    <option>Rizky Pratama</option>
+                    <option>Ayu Lestari</option>
+                    <option>Budi Santoso</option>
+                    <option>Sari Dewi</option>
+                    <option>Fachri Alamsyah</option>
+                    <option>Siti Nurhaliza</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down filter-field__chevron"></i>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn--primary filter-card__submit" id="applyFilter">Terapkan Filter</button>
+              <button type="button" class="filter-card__reset" id="filterReset" style="margin-top:8px;width:100%;text-align:center;background:none;border:1px solid #cbd5e1;border-radius:8px;padding:8px;cursor:pointer;font-weight:600;color:#64748b;"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">Di<span class="navbar__logo-accent">CO</span></span>
+        <span class="footer__logo-tagline">Digital Creative Community</span>
+        <p>Bersama membangun generasi kreatif yang siap menghadapi masa depan digital.</p>
+      </div>
+
+      <div class="footer__col">
+        <h5>Navigasi</h5>
+        <a href="index.html">Beranda</a>
+        <a href="event.html">Event</a>
+        <a href="expert.html">Expert</a>
+        <a href="visimisi.html">Visi &amp; Misi</a>
+        <a href="about.html">About</a>
+        <a href="cermai.html">CerMAI</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+
+      <div class="footer__col">
+        <h5>Kontak</h5>
+        <a href="mailto:info@dicocommunity.org"><i class="fa-regular fa-envelope"></i> info@dicocommunity.org</a>
+        <a href="tel:+6281234567890"><i class="fa-solid fa-phone"></i> +62 812 3456 7890</a>
+        <span><i class="fa-solid fa-location-dot"></i> Yogyakarta, Indonesia</span>
+      </div>
+
+      <div class="footer__col">
+        <h5>Ikuti Kami</h5>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/dico.community" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.tiktok.com/@dico.community" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>&copy; 2026 DICO Community. All rights reserved.</span>
+        <div class="footer__bottom-links">
+          <a href="kontak.html">Syarat &amp; Ketentuan</a>
+          <a href="kontak.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/api.js"></script>
+  <script src="js/experts-data.js"></script>
+  <script src="js/events-data.js"></script>
+  <script src="js/event-render.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

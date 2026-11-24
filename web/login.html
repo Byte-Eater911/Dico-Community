@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masuk / Daftar Akun | DICO - Digital Creative Community</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-flow page-login">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo-dico.png" alt="Logo DICO" class="navbar__logo-img" />
+        <span class="navbar__logo-tagline">Digital Creative Community</span>
+      </a>
+
+      <nav class="navbar__nav" id="navbarNav">
+        <a href="index.html" class="navbar__link">Beranda</a>
+        <a href="event.html" class="navbar__link">Event</a>
+        <a href="expert.html" class="navbar__link">Expert</a>
+        <a href="visimisi.html" class="navbar__link">Visi &amp; Misi</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="cermai.html" class="navbar__link">CerMAI</a>
+        <a href="kontak.html" class="navbar__link">Kontak</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="login.html" class="navbar__login">Login</a>
+        <a href="login.html?mode=daftar" class="btn btn--primary btn--sm">Daftar</a>
+      </div>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Buka menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="flow-page flow-page--auth">
+    <div class="container">
+      <div class="auth">
+        <aside class="auth__brand">
+          <span class="auth__deco auth__deco--dots" aria-hidden="true"></span>
+          <span class="auth__deco auth__deco--slash" aria-hidden="true"></span>
+          <span class="auth__eyebrow">Digital Creative Community</span>
+          <h1 class="auth__headline">Belajar.<br />Terhubung.<br /><span>Berkembang.</span></h1>
+          <p class="auth__lead">Masuk untuk mendaftar seminar, webinar, dan workshop DICO dalam beberapa langkah saja.</p>
+          <ul class="auth__points">
+            <li>Pendaftaran event dalam satu akun</li>
+            <li>Pantau status pendaftaran dan pembayaran</li>
+            <li>Bergabung dengan komunitas kreatif digital</li>
+          </ul>
+        </aside>
+
+        <section class="auth__panel" aria-labelledby="authTitle">
+          <div class="auth-tabs" role="tablist">
+            <button class="auth-tab is-active" type="button" role="tab" id="tabMasuk" aria-selected="true" aria-controls="formLogin">Masuk</button>
+            <button class="auth-tab" type="button" role="tab" id="tabDaftar" aria-selected="false" aria-controls="formDaftar">Daftar Akun</button>
+          </div>
+
+          <h2 class="auth__title" id="authTitle">Masuk ke akunmu</h2>
+          <p class="auth__sub" id="authSub">Gunakan email dan password yang kamu daftarkan.</p>
+
+          <div class="flow-alert flow-alert--info" id="authNotice" hidden></div>
+
+          <!-- MASUK -->
+          <form id="formLogin" novalidate>
+            <div class="flow-alert flow-alert--error" id="loginError" role="alert" hidden></div>
+            <div class="field">
+              <label class="field__label" for="loginEmail">Email</label>
+              <input class="field__control" id="loginEmail" name="email" type="email" autocomplete="email" placeholder="nama@email.com" />
+              <p class="field__error"></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="loginPassword">Password</label>
+              <div class="field__pass">
+                <input class="field__control" id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Masukkan password" />
+                <button class="field__toggle" type="button" data-toggle-pass="loginPassword">Lihat</button>
+              </div>
+              <p class="field__error"></p>
+            </div>
+            <button class="flow-btn flow-btn--primary flow-btn--block" type="submit" id="loginSubmit">Masuk</button>
+            <p class="auth__switch">Belum punya akun? <a href="#" data-switch="daftar">Daftar akun</a></p>
+          </form>
+
+          <!-- DAFTAR AKUN -->
+          <form id="formDaftar" novalidate hidden>
+            <div class="flow-alert flow-alert--error" id="daftarError" role="alert" hidden></div>
+            <div class="field">
+              <label class="field__label" for="regNama">Nama lengkap</label>
+              <input class="field__control" id="regNama" name="nama" type="text" autocomplete="name" placeholder="Sesuai identitas" />
+              <p class="field__error"></p>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="regEmail">Email</label>
+                <input class="field__control" id="regEmail" name="email" type="email" autocomplete="email" placeholder="nama@email.com" />
+                <p class="field__error"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="regWa">No. WhatsApp</label>
+                <input class="field__control" id="regWa" name="wa" type="tel" autocomplete="tel" placeholder="0812 3456 7890" />
+                <p class="field__error"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="regInstansi">Instansi <span class="flow-muted">(opsional)</span></label>
+              <input class="field__control" id="regInstansi" name="instansi" type="text" autocomplete="organization" placeholder="Kampus, sekolah, atau perusahaan" />
+              <p class="field__error"></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="regMinat">Produk yang diminati <span class="flow-muted">(opsional)</span></label>
+              <input class="field__control" id="regMinat" name="minat_produk" type="text" placeholder="Contoh: workshop, mentoring" />
+              <p class="field__error"></p>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="regPassword">Password</label>
+                <div class="field__pass">
+                  <input class="field__control" id="regPassword" name="password" type="password" autocomplete="new-password" placeholder="Minimal 8 karakter" />
+                  <button class="field__toggle" type="button" data-toggle-pass="regPassword">Lihat</button>
+                </div>
+                <p class="field__error"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="regPassword2">Ulangi password</label>
+                <input class="field__control" id="regPassword2" name="password2" type="password" autocomplete="new-password" placeholder="Ketik ulang password" />
+                <p class="field__error"></p>
+              </div>
+            </div>
+            <button class="flow-btn flow-btn--primary flow-btn--block" type="submit" id="daftarSubmit">Buat Akun</button>
+            <p class="auth__switch">Sudah punya akun? <a href="#" data-switch="masuk">Masuk</a></p>
+          </form>
+
+          <p class="auth__demo" id="authDemo" hidden>Mode demo: akun dan pendaftaran hanya tersimpan di browser ini.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+    <!-- Ubah bagian ini menjadi tag img yang mengarah ke logo Anda -->
+    <a href="index.html">
+        <img src="assets/images/logo-dico.png" alt="DiCO Community" class="footer__logo-img">
+    </a>
+    <span class="footer__logo-tagline">Digital Creative Community</span>
+    <p>Bersama membangun generasi kreatif yang siap menghadapi masa depan digital.</p>
+</div>
+
+      <div class="footer__col">
+        <h5>Navigasi</h5>
+        <a href="index.html">Beranda</a>
+        <a href="event.html">Event</a>
+        <a href="expert.html">Expert</a>
+        <a href="visimisi.html">Visi &amp; Misi</a>
+        <a href="about.html">About</a>
+        <a href="cermai.html">CerMAI</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+
+      <div class="footer__col">
+        <h5>Kontak</h5>
+        <a href="mailto:info@dicocommunity.org"><i class="fa-regular fa-envelope"></i> info@dicocommunity.org</a>
+        <a href="tel:+6281234567890"><i class="fa-solid fa-phone"></i> +62 812 3456 7890</a>
+        <span><i class="fa-solid fa-location-dot"></i> Yogyakarta, Indonesia</span>
+      </div>
+
+      <div class="footer__col">
+        <h5>Ikuti Kami</h5>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/dico.community" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.tiktok.com/@dico.community" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>&copy; 2026 DICO Community. All rights reserved.</span>
+        <div class="footer__bottom-links">
+          <a href="kontak.html">Syarat &amp; Ketentuan</a>
+          <a href="kontak.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/api.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/experts-data.js"></script>
+  <script src="js/events-data.js"></script>
+  <script src="js/flow.js"></script>
+</body>
+</html>

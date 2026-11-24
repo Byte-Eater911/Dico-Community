@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expert | DICO - Digital Creative Community</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-expert">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo-dico.png" alt="Logo DICO" class="navbar__logo-img" />
+        <span class="navbar__logo-tagline">Digital Creative Community</span>
+      </a>
+
+      <nav class="navbar__nav" id="navbarNav">
+        <a href="index.html" class="navbar__link">Beranda</a>
+        <a href="event.html" class="navbar__link">Event</a>
+        <a href="expert.html" class="navbar__link navbar__link--active">Expert</a>
+        <a href="visimisi.html" class="navbar__link">Visi &amp; Misi</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="cermai.html" class="navbar__link">CerMAI</a>
+        <a href="kontak.html" class="navbar__link">Kontak</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="login.html" class="navbar__login">Login</a>
+        <a href="login.html?mode=daftar" class="btn btn--primary btn--sm">Daftar</a>
+      </div>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Buka menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO EXPERT ============ -->
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div class="page-hero__content">
+          <span class="badge-pill">Professional Mentor</span>
+          <h1 class="page-hero__title">
+            Temukan Expert<br />
+            <span class="page-hero__accent">Terbaik di DICO</span>
+          </h1>
+          <p class="page-hero__desc">
+            Koneksi dengan para profesional, praktisi, dan mentor berpengalaman dari berbagai bidang untuk mendukung perkembangan karier dan skill kamu.
+          </p>
+          <div class="page-hero__cta">
+            <a href="#daftar-expert" class="btn btn--outline">
+              Lihat Daftar Expert <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+        <div class="page-hero__media">
+          <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+            <defs>
+              <clipPath id="heroPhotoShape" clipPathUnits="objectBoundingBox">
+                <path d="M0.155 0.03 L0.885 0 C0.955 0 1 0.05 1 0.14 L1 0.82 C1 0.95 0.95 1 0.87 0.99 C0.6 0.93 0.3 0.85 0.12 0.80 C0.03 0.775 0 0.72 0 0.62 L0 0.5 C0 0.28 0.05 0.08 0.155 0.03 Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="page-hero__shape page-hero__shape--blob" aria-hidden="true"></span>
+          <span class="page-hero__shape page-hero__rim" aria-hidden="true"><span></span></span>
+          <span class="page-hero__shape page-hero__shape--dots" aria-hidden="true"></span>
+          <span class="page-hero__shape page-hero__shape--slash-top" aria-hidden="true"></span>
+          <span class="page-hero__shape page-hero__shape--slash-bottom" aria-hidden="true"></span>
+          <div class="page-hero__photo">
+            <img src="assets/images/hero3.jpeg" alt="Pembicara DICO tampil di podium pada acara komunitas" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEARCH ============ -->
+    <section class="search-section" id="daftar-expert">
+      <div class="container">
+        <div class="search-box">
+          <div class="search-box__input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Cari expert, bidang, atau keahlian..." id="searchInput" />
+          </div>
+          <button class="icon-btn icon-btn--primary icon-btn--lg" id="searchBtn" aria-label="Cari">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="category-pills" id="categoryPills"><!-- dibuat otomatis dari js/experts-data.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERT LISTING ============ -->
+    <section class="event-listing-section">
+      <div class="container">
+        <div class="event-layout">
+
+          <!-- BAGIAN KIRI: daftar expert -->
+          <div class="event-layout__main">
+            <div class="section-header">
+              <div>
+                <span class="eyebrow">EXPERT DICO</span>
+                <h2 class="section-title">Kenali Para Expert Inspiratif di DICO</h2>
+                <p class="section-desc">Dapatkan ilmu, insight, dan pengalaman langsung dari para profesional di bidangnya masing-masing.</p>
+              </div>
+              <div class="sort-select">
+                <span class="sort-select__label">Urutkan</span>
+                <select id="sortSelect" aria-label="Urutkan expert">
+                  <option value="default">Urutan Awal</option>
+                  <option value="name">Nama A-Z</option>
+                  <option value="skills">Keahlian Terbanyak</option>
+                </select>
+                <i class="fa-solid fa-chevron-down sort-select__chevron"></i>
+              </div>
+            </div>
+
+            <div class="expert-grid" id="expertCatalog">
+              <!-- Kartu dibuat otomatis dari js/experts-data.js -->
+            </div>
+
+            <nav class="pagination" id="pagination" aria-label="Navigasi halaman expert">
+              <button class="pagination__nav" id="pagePrev" aria-label="Halaman sebelumnya"><i class="fa-solid fa-arrow-left"></i></button>
+              <button class="pagination__page pagination__page--active" data-page="1">1</button>
+              <button class="pagination__page" data-page="2">2</button>
+              <button class="pagination__page" data-page="3">3</button>
+              <button class="pagination__page" data-page="4">4</button>
+              <button class="pagination__page" data-page="5">5</button>
+              <button class="pagination__nav" id="pageNext" aria-label="Halaman selanjutnya"><i class="fa-solid fa-arrow-right"></i></button>
+            </nav>
+
+            <div class="cta-box cta-box--dark">
+              <div class="cta-box__deco cta-box__deco--red"></div>
+              <div class="cta-box__deco cta-box__deco--teal"></div>
+              <div class="cta-box__content">
+                <h2>Ingin Menjadi Expert di DICO?</h2>
+                <p>Bagikan pengetahuan, pengalaman, dan keahlianmu bersama komunitas DICO.</p>
+              </div>
+              <a href="login.html" class="btn btn--teal">Daftar Sekarang <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- BAGIAN KANAN: panel Filter Expert -->
+          <aside class="event-layout__sidebar">
+            <div class="filter-card">
+              <div class="filter-card__header">
+                <h3>Filter Expert</h3>
+                <button type="button" class="filter-card__reset" id="filterReset">
+                  <i class="fa-solid fa-rotate-left"></i> Reset
+                </button>
+              </div>
+
+              <div class="filter-group">
+                <span class="filter-group__label"><i class="fa-solid fa-list-check"></i> Bidang Keahlian</span>
+                <div id="expertFilterList"><!-- dibuat otomatis dari js/experts-data.js --></div>
+              </div>
+              <button type="button" class="btn btn--primary filter-card__submit" id="applyFilter">
+                <i class="fa-solid fa-filter"></i> Terapkan Filter
+              </button>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">Di<span class="navbar__logo-accent">CO</span></span>
+        <span class="footer__logo-tagline">Digital Creative Community</span>
+        <p>Bersama membangun generasi kreatif yang siap menghadapi masa depan digital.</p>
+      </div>
+
+      <div class="footer__col">
+        <h5>Navigasi</h5>
+        <a href="index.html">Beranda</a>
+        <a href="event.html">Event</a>
+        <a href="expert.html">Expert</a>
+        <a href="visimisi.html">Visi &amp; Misi</a>
+        <a href="about.html">About</a>
+        <a href="cermai.html">CerMAI</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+
+      <div class="footer__col">
+        <h5>Kontak</h5>
+        <a href="mailto:info@dicocommunity.org"><i class="fa-regular fa-envelope"></i> info@dicocommunity.org</a>
+        <a href="tel:+6281234567890"><i class="fa-solid fa-phone"></i> +62 812 3456 7890</a>
+        <span><i class="fa-solid fa-location-dot"></i> Yogyakarta, Indonesia</span>
+      </div>
+
+      <div class="footer__col">
+        <h5>Ikuti Kami</h5>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/dico.community" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.tiktok.com/@dico.community" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="kontak.html#media-sosial" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>&copy; 2026 DICO Community. All rights reserved.</span>
+        <div class="footer__bottom-links">
+          <a href="kontak.html">Syarat &amp; Ketentuan</a>
+          <a href="kontak.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/api.js"></script>
+  <script src="js/experts-data.js"></script>
+  <script src="js/expert-render.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

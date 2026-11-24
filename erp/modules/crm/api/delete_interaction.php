@@ -1,0 +1,44 @@
+<?php
+
+header("Content-Type: application/json");
+
+require_once "db.php";
+
+$id = intval($_POST["id"] ?? 0);
+
+if($id == 0){
+
+    echo json_encode([
+        "success"=>false,
+        "message"=>"ID tidak valid."
+    ]);
+
+    exit;
+
+}
+
+$stmt = $conn->prepare("
+DELETE FROM crm_interactions
+WHERE id = ?
+");
+
+$stmt->bind_param("i", $id);
+
+if($stmt->execute()){
+
+    echo json_encode([
+        "success"=>true,
+        "message"=>"Interaksi berhasil dihapus."
+    ]);
+
+}else{
+
+    echo json_encode([
+        "success"=>false,
+        "message"=>"Gagal menghapus interaksi."
+    ]);
+
+}
+
+$stmt->close();
+$conn->close();
