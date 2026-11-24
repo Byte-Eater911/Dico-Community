@@ -62,7 +62,7 @@
 
   async function loadLiveEvents() {
     try {
-      const res = await fetch("api/get_events.php?_t=" + Date.now());
+      const res = await fetch("data/events.json?_t=" + Date.now());
       const json = await res.json();
       if (json.success && Array.isArray(json.data)) {
         window.DICO_EVENT_DATA.EVENTS = json.data;
