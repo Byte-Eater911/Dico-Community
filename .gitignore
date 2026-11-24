@@ -1,0 +1,10 @@
+backup/
+config/database.php
+config/hash.php
+*.log
+*.bak
+*.tmp
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
